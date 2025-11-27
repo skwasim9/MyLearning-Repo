@@ -2,9 +2,9 @@ version: '3.9'
 
 services:
   web:
-    build: .
-    container_name: flask_app
-    ports:
+    build:
+    image: nginx/nging:latest
+        ports:
       - "8000:8000"
       volumes:
       - .:/app
@@ -12,6 +12,7 @@ services:
       - FLASK_ENV=development
 
     restart: always
+
 
 
 
